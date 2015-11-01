@@ -1,0 +1,13 @@
+<h1>Welcome to Multi Paperclip</h1>
+
+<% @photos.each do |photo| %>
+	<div class="panel panel-default"></div>
+		<div class="panel-heading">
+			<%= photo.title %>
+		</div>
+		<div class="panel-body">
+			<%= image_tag photo.image.url(:medium) %>
+		</div>
+<% end %>
+
+<p><%= link_to "New photo", new_photo_path, class: "btn btn-link" %></p>
